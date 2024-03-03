@@ -136,13 +136,13 @@ class show_page(discord.ui.Button):
         super().__init__(label=label, emoji=emoji, style=style, disabled=True, row=row)
 
 
-class goto_modal(discord.ui.Modal, title="Go to"):
+class goto_modal(discord.ui.Modal, title="Выбор страницы"):
     def __init__(self, button):
         super().__init__()
         self.button = button
         self.page_num = discord.ui.TextInput(
             label='Page',
-            placeholder=f'page number 1-{len(self.button.view.embeds)}',
+            placeholder=f'Номер страницы 1-{len(self.button.view.embeds)}',
             style=discord.TextStyle.short,
             required=True
         )
